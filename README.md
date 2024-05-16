@@ -1,14 +1,14 @@
 
 # LiChessDb_to_Tensor
-Converts data from my [lichess data to pure fen + eval](https://github.com/VedantJoshi1409/lichess-eval-database-converter) into a form that can easily be turned into tensors in Python.
+Converts data from my [lichess data to pure fen + eval](https://github.com/VedantJoshi1409/lichess-eval-database-converter) into a form that can easily be turned into tensors in python.
 
 ## Usage 
-Download the [evaluation data](https://database.lichess.org/#evals) from lichess and run it through my [data to fen + eval](%28https://github.com/VedantJoshi1409/lichess-eval-database-converter%29) program. Put it in this program folder and enter the amount of lines you would like to transform, inside of the "main.java" file. Run it and there should be a file named "output.txt" with all the tensor information. 
+Download the [evaluation data](https://database.lichess.org/#evals) from lichess and run it through my [data to fen + eval](https://github.com/VedantJoshi1409/lichess-eval-database-converter) program. Put it in this program folder and enter the amount of lines you would like to transform, inside of the "main.java" file. Run it and there should be a file named "output.txt" with all the tensor information. 
 
 ## Format
 Based on [research](https://github.com/official-stockfish/nnue-pytorch/blob/master/docs/nnue.md#feature-set) from Stockfish
-![HalfKP[40960]->4x2->8->1](https://github.com/official-stockfish/nnue-pytorch/raw/master/docs/img/HalfKP-40960-4x2-8-1.svg)
-Feature set of the network should be a tensor of size 81920 with values in the tensor set to either 1 or 0. Each index represents a possible combination of (our king square, piece square, piece type, piece owner). The first 40960 inputs consisting of the position from the view of the player to move, and the last 40960 inputs consist of the position from the view of the enemy, with the board flipped. 
+![HalfKP[40960]->4x2->8->1](https://github.com/official-stockfish/nnue-pytorch/raw/master/docs/img/HalfKP-40960-4x2-8-1.svg)\
+Feature set of the network should be a tensor of size 81920 with values in the tensor set to either 1 or 0. Each index represents a possible combination of (our king square, piece square, piece type, piece owner). The first 40960 inputs consisting of the position from the view of the player to move, and the last 40960 inputs consisting of the position from the view of the enemy, with the board flipped. 
 
 
 ## Example
