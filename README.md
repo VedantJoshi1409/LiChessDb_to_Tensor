@@ -12,11 +12,11 @@ Feature set of the network should be a tensor of size 81920 with values in the t
 
 
 ## Example
-![](https://i.imgur.com/x7IOFcB.png)
-This position can be represented by the following fen
-``` 3k4/2r5/8/8/8/1P6/K7/8 w - -, -657```
-which gets turned into 
-```5628, 42983, 5296, 43301, -657```
+![](https://i.imgur.com/x7IOFcB.png)\
+This position can be represented by the following fen\
+``` 3k4/2r5/8/8/8/1P6/K7/8 w - -, -657```\
+which gets turned into \
+```5628, 42983, 5296, 43301, -657```\
 where the first 4 numbers are indices where the value should be set to 1, and the last number is the evaluation. 
 
 ## How It Works
