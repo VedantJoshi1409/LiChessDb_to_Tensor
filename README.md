@@ -21,12 +21,12 @@ where the first 4 numbers are indices where the value should be set to 1, and th
 
 ## How It Works
 These numbers are computed by 
-- taking our king square, multiplying it by 64 * 5 * 2 (64 possible piece squares, 5 piece types since king not included, 2 options since it is our piece or their piece) 
-- adding the piece square multiplied by 5 * 2 (5 piece types, 2 options for piece owner)
+- taking our king square, multiplying it by 64 x 5 x 2 (64 possible piece squares, 5 piece types since king not included, 2 options since it is our piece or their piece) 
+- adding the piece square multiplied by 5 x 2 (5 piece types, 2 options for piece owner)
 - adding the piece type ofset by 5 if it is an enemy piece
 - if we are looking from the enemy point of view, ofset by 40960
 
 Lets do an example for the above position
 First the white pawn:
 Our king is on square 8, our pawn on square 17, our piece type is 6 (queen is 2, rook is 3, bishop is 4, knight 5, pawn 6), and no ofset since it is our piece.
-The index would be equal to 8*64*5*2 + 17*5*2 + 6 = 5296 which is the 3rd number above. (rooks are computed before pawns)
+The index would be equal to 8x64x5x2 + 17x5x2 + 6 = 5296 which is the 3rd number above. (rooks are computed before pawns)
